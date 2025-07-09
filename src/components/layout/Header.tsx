@@ -1,5 +1,5 @@
 import { Shield } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "../ui/ThemeToggle";
 
 export const Header = () => {
     return (

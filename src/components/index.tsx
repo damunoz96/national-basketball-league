@@ -1,5 +1,4 @@
-export { Header } from "./Header";
-export { Footer } from "./Footer";
-export { Sidebar } from "./Sidebar";
-export { ThemeToggle } from "./ThemeToggle";
-export { TeamCard } from "./TeamCard";
+export { Header } from "./layout/Header";
+export { Footer } from "./layout/Footer";
+export { Sidebar } from "./layout/Sidebar";
+export { ThemeToggle } from "./ui/ThemeToggle";

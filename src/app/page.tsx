@@ -1,5 +1,4 @@
-import { TeamCard } from "@/components";
-
+import { TeamCard } from "@/app/teams/_components/TeamCard";
 export default function Home() {
   const teams = [
     {
@@ -23,6 +22,7 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {teams.map((team) => (
           <TeamCard
+            id={team.id}
             key={team.id}
             name={team.name}
             city={team.city}
