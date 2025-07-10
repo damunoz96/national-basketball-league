@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface TeamPageProps {
   params: {
     teamId: string; // the name of "teamId" must coincide with the name of the folder [teamId]
@@ -51,7 +53,9 @@ export default function TeamDetailPage ( {params} : TeamPageProps ) {
             <h2 className="text-2xl mt-8 font-semibold">Roster</h2>
             <ul>
                 {players.map(player => (
+                  <Link href={`/players/${player.id}`} key={player.id} className="block">
                     <li key={player.id} className="py-2"> {player.name} - {player.position}</li>
+                  </Link>
                 ))}
             </ul>
         </div>
