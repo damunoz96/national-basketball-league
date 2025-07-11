@@ -52,8 +52,6 @@ export default async function TeamDetailPage ( {params} : TeamPageProps ) {
       .eq("team_id", teamId)
       ;
 
-    console.log(players)
-
     if (teamError || playersError) {
         console.error("Error fetching team or players:", teamError || playersError);
     }
