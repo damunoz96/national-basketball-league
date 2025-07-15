@@ -29,3 +29,17 @@ export async function createTeam(formData: FormData) {
   // y que necesita volver a pedirlos la próxima vez que alguien la visite.
   revalidatePath("/");
 }
+
+export async function deleteTeam(teamId: number) {
+  const { error } = await supabase
+    .from("teams")
+    .delete()
+    .eq("team_id", teamId)
+
+  if (error) {
+    console.error("Error deleting the team", error);
+  }
+  
+  revalidatePath("/");
+  revalidatePath("/admin/teams");
+}

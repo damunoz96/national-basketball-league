@@ -1,6 +1,6 @@
 "use client";
 
-import { createTeam } from "../actions";
+import { createTeam } from "../../actions";
 
 export const NewTeamForm = () => {
   return (
