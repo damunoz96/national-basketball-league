@@ -4,10 +4,15 @@ import { DeleteTeamButton } from "../_components/DeleteTeamButton";
 export default async function AdminTeamsPage() {
   const { data: teams, error } = await supabase.from("teams").select("*");
 
+  if (error) {
+    return (
+      <div>There was an error trying to load the team list...</div>
+    )
+  }
+
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">Manage Teams</h1>
-      {/* Aquí iría una tabla más bonita, pero por ahora una lista funciona */}
       <ul>
         {teams?.map((team) => (
           <li
