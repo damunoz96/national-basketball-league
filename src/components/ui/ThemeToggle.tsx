@@ -1,12 +1,26 @@
 "use client";
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme as useNextTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
 export const ThemeToggle = () => {
-    const { toggleTheme, theme } = useTheme();
+    const { theme, setTheme } = useNextTheme();
     return (
-        <button onClick={toggleTheme} className="p-2 rounded-full text-gray-500 hover:bg-gray-300 transition-colors">
-            {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-        </button>
+      <div className="cursor-pointer">
+        {theme === "light" ? (
+          <Moon
+            className=""
+            onClick={() => setTheme("dark")}
+            size={20}
+          />
+        ) : (
+          <Sun
+            className=""
+            onClick={() => setTheme("light")}
+            size={20}
+          />
+        )}
+      </div>
+      //<button onClick={()=>setTheme} className="p-2 rounded-full text-gray-500 hover:bg-gray-300 transition-colors">
+      //</button>
     );
 };

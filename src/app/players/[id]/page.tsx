@@ -5,14 +5,14 @@ interface PlayerDetailPageProps {
 }
 
 const players = [
-  { id: 101, name: "Stephen Curry", teamId: 1, position: "G" },
-  { id: 102, name: "Klay Thompson", teamId: 1, position: "G" },
-  { id: 103, name: "Kobe Bryant", teamId: 2, position: "G" },
-  { id: 104, name: "LeBron James", teamId: 2, position: "G" },
-  { id: 105, name: "Shanon Brown", teamId: 3, position: "G" },
-  { id: 106, name: "Jayson Tatum", teamId: 3, position: "G" },
-  { id: 107, name: "Lonzo Ball", teamId: 4, position: "G" },
-  { id: 108, name: "Zach Lavine", teamId: 4, position: "G" },
+  { id: 1, name: "Stephen Curry", teamId: 1, position: "G" },
+  { id: 2, name: "Klay Thompson", teamId: 1, position: "G" },
+  { id: 3, name: "Kobe Bryant", teamId: 2, position: "G" },
+  { id: 4, name: "LeBron James", teamId: 2, position: "G" },
+  { id: 5, name: "Shanon Brown", teamId: 3, position: "G" },
+  { id: 6, name: "Jayson Tatum", teamId: 3, position: "G" },
+  { id: 7, name: "Lonzo Ball", teamId: 4, position: "G" },
+  { id: 8, name: "Zach Lavine", teamId: 4, position: "G" },
 ];
 
 const getPlayerData = (playerId: string) => {

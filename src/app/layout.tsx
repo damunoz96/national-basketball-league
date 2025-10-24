@@ -1,5 +1,5 @@
 import { Footer, Header, Sidebar } from "@/components";
-import { ThemeProvider } from "@/context/ThemeContext";
+import { ThemeProvider } from "next-themes";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -19,16 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+        <ThemeProvider enableSystem attribute="class">
           <div className="flex flex-col min-h-screen">
             <Header />
             <div className="flex flex-1">
-              <Sidebar />
-              <main className="flex-1 p-6">
-                {children}
-              </main>
+              {/* <Sidebar /> */}
+              <main className="flex-1 p-6">{children}</main>
             </div>
             <Footer />
           </div>

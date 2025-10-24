@@ -1,6 +1,6 @@
 "use client"
 import { Trash2 } from "lucide-react";
-import { deleteTeam } from "../teams/actions";
+import { deleteTeam } from "../teamsAdmin/actions";
 
 interface DeleteTypeButtonProps {
     teamId: number;
